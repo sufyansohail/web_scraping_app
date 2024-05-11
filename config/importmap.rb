@@ -5,4 +5,4 @@ pin "@hotwired/turbo-rails", to: "turbo.min.js", preload: true
 pin "@hotwired/stimulus", to: "stimulus.min.js", preload: true
 pin "@hotwired/stimulus-loading", to: "stimulus-loading.js", preload: true
 pin_all_from "app/javascript/controllers", under: "controllers"
-pin "vue", to: "https://ga.jspm.io/npm:vue@3.4.27/dist/vue.runtime.esm-browser.prod.js"
+pin "vue", to: "https://ga.jspm.io/npm:vue@3.3.13/dist/vue.esm-browser.prod.js"
