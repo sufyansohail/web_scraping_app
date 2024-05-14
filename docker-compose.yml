@@ -1,0 +1,20 @@
+version: "3.8"
+
+services:
+  app:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      RAILS_ENV: development
+      DATABASE_URL: sqlite3:///db/development.sqlite3
+    volumes:
+      - .:/rails
+    depends_on:
+      - db
+
+  db:
+    image: alpine
+    command: tail -f /dev/null
+    volumes:
+      - ./db:/db
