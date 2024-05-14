@@ -89,6 +89,7 @@ export default {
               placeholder="Enter URL"
               class="block w-full p-4 py-5 ps-10 text-lg text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 outline-none focus:border-blue-500"
               type="search"
+              @keyup.enter="inputUrl.trim() != '' && scrapeUrl()"
             />
             <button @click="scrapeUrl" :class="{ 'opacity-70 pointer-events-none' : inputUrl.trim() == '' }" class="absolute end-2.5 bottom-1/2 translate-y-1/2 p-4 text-sm font-medium text-white bg-blue-700 rounded-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300">
               <span v-if="loading">
